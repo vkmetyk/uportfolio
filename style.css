@@ -1,0 +1,262 @@
+* {
+    font-family: "Arbutus Slab", serif !important;
+}
+
+*::selection {
+    background: #262626;
+    color: #fff;
+}
+
+body {
+    color: #666;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+
+header a:hover,
+.footer a:hover {
+    color: #196130 !important;
+}
+
+input, textarea {box-shadow: none !important;}
+input:focus, textarea:focus {border-bottom: 1px solid #1a634e !important;}
+
+/* header */
+header {
+    background: transparent;
+    backdrop-filter: blur(5px);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+header li a {
+    color: #39393a;
+    font-size: 18px;
+}
+
+.site-logo {
+    font-size: 1rem;
+    animation: float 6s infinite;
+}
+
+.site-logo > a {
+    font-size: 24px;
+}
+
+.active {
+    color: #1a634e !important;
+}
+
+.navbar-toggler {
+    box-shadow: none !important;
+}
+
+/* container */
+.container {
+    padding: 80px 0 15px 0;
+}
+
+.container h2 {
+    color: #000;
+}
+
+/* skills */
+.skill {
+    border: 1px solid #f4f4f4;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.skill h3 {
+    color: black;
+    font-size: 1.2rem;
+}
+
+.skill:hover {
+    box-shadow: 0 8px 50px -5px rgba(0, 0, 0, 0.1);
+}
+
+.skills-text {
+    color: #535353;
+}
+
+.icon-item {
+    background: #207561;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.icon-item::before {
+    content: "๏";
+    font-size: 28px;
+}
+/* About me */
+.btn.btn-primary {
+    background: #207561;
+    border-color: #207561;
+    color: #fff;
+}
+
+.btn {
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+
+/* projects */
+
+.project * {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.project {
+    border: 1px solid #fff;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    padding: 5px 5px 5px 5px;
+    position: relative;
+    text-align: center;
+}
+
+.project:hover {
+    border: 1px solid #f4f4f4;
+    box-shadow: 0 8px 50px -5px rgba(0, 0, 0, 0.2);
+}
+
+.project:hover * {
+    opacity: 100%;
+}
+
+.project-img-box {
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+}
+
+.project-img-box img {
+    max-height: 250px;
+}
+
+.project-name {
+    color: #000;
+    opacity: 80%;
+    font-size: 18px;
+    padding: 10px 5px 0 5px;
+}
+
+.project-languages {
+    color: #fff;
+    text-align: center;
+}
+.language-icon {
+    background: #207561;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 2px 8px;
+    opacity: 70%;
+}
+
+/* contact form */
+.form, .form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* footer */
+.footer {
+    padding: 1em 0;
+}
+
+.footer h3 {
+    color: #000;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer h3::before {
+    background: #000;
+    border-radius: 15px;
+    color: #fff;
+    content: "test";
+    font-size: 14px;
+    padding: 15px;
+    position: absolute;
+    line-height: 0;
+    height: 100%;
+    top: -50px;
+    visibility: hidden;
+}
+
+.footer h3:hover::before {
+    visibility: visible;
+}
+
+.footer .title-1::before {content: "List of my social";}
+.footer .title-2::before {content: "Link for my CV document";}
+
+.footer p, .footer a {
+    color: #757575;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* min width */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .navbar li {
+        margin-left : 1.2em;
+        margin-right : 1.2em;
+    }
+    .container {
+        max-width: 960px;
+    }
+}
+/* max width */
+@media (max-width: 768px) {
+    .navbar li * {
+        color: #000;
+    }
+    .navbar-menu {
+        text-align: center;
+    }
+}
+
+@keyframes float {
+    0% {transform: translateX(0px);}
+    25% {transform: translateX(-10px);}
+    50% {transform: translateX(0px);}
+    75% {transform: translateX(10px);}
+    100% {transform: translateX(0px);}
+}
